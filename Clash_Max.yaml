@@ -210,6 +210,7 @@ rule-providers:
 
 # 分流规则指向
 rules:
+ - DOMAIN,cn.archive.ubuntu.com,DIRECT
  - RULE-SET,Apple,Apple
  - RULE-SET,YouTube,YouTube
  - RULE-SET,ChinaMedia,DIRECT
