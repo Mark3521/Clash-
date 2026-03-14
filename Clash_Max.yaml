@@ -210,6 +210,13 @@ rule-providers:
 
 # 分流规则指向
 rules:
+ - DOMAIN-KEYWORD,connectivitycheck,DIRECT
+ - DOMAIN-KEYWORD,msftconnecttest,DIRECT
+ - DOMAIN-KEYWORD,captive,DIRECT
+ # 针对不同系统的特定域名
+ - DOMAIN,detectportal.firefox.com,DIRECT
+ - DOMAIN,apple.com,DIRECT # 苹果设备常用于探测
+ - DOMAIN-SUFFIX,gstatic.com,DIRECT
  - DOMAIN-SUFFIX,short.weixin.qq.com,Proxy
  - DOMAIN-SUFFIX,extshort.weixin.qq.com,Proxy
  - DOMAIN-SUFFIX,steamserver.net,DIRECT
