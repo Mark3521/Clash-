@@ -214,6 +214,7 @@ rules:
  - DOMAIN-KEYWORD,msftconnecttest,DIRECT
  - DOMAIN-KEYWORD,captive,DIRECT
  # 针对不同系统的特定域名
+ - DOMAIN-KEYWORD,18comic,OpenAI
  - DOMAIN,detectportal.firefox.com,DIRECT
  - DOMAIN,apple.com,DIRECT # 苹果设备常用于探测
  - DOMAIN-SUFFIX,gstatic.com,DIRECT
