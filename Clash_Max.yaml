@@ -217,7 +217,6 @@ rules:
  - DOMAIN-KEYWORD,18comic,OpenAI
  - DOMAIN,detectportal.firefox.com,DIRECT
  - DOMAIN,apple.com,DIRECT # 苹果设备常用于探测
- - DOMAIN-SUFFIX,gstatic.com,DIRECT
  - DOMAIN-SUFFIX,short.weixin.qq.com,Proxy
  - DOMAIN-SUFFIX,extshort.weixin.qq.com,Proxy
  - DOMAIN-SUFFIX,steamserver.net,DIRECT
