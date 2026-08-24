@@ -14,8 +14,8 @@
 proxy-providers:
   provider1:
     type: http
-    url: "url"  # 填入订阅链接
-    interval: 3600  # 订阅更新间隔，单位：秒
+    url: "https://s2.trojanflare.one/clashx/40866a9c-4281-4800-96a6-685bbacf383c"  # 填入订阅链接
+    interval: 86400  # 订阅更新间隔，单位：秒
     path: ./proxy_provider/provider1.yaml
     proxy: DIRECT  # 下载订阅时使用的策略
     # 在 Provider 层统一排除公告、流量、到期等非节点条目，避免各策略组重复配置
@@ -40,22 +40,14 @@ proxy-providers:
 # 当前示例参数不对应任何真实服务器；未修改时该节点不可用，fallback 将自动回落机场。
 proxies:
   - name: "🏴‍☠️ 自建节点 01"
-    type: vless
-    server: selfhost.example.com  # 必须替换为自建服务器地址
-    port: 443 # 按服务端实际端口修改
-    uuid: "00000000-0000-0000-0000-000000000000" # 必须替换为真实 UUID
+    type: trojan
+    server: us-2.hydraing.com
+    port: 443
+    password: "dXmnym9xNvMAYsK5va"
     udp: true
-    flow: xtls-rprx-vision
-    packet-encoding: xudp
-    tls: true
-    servername: example.com  # 必须与 Reality 服务端配置一致
-    client-fingerprint: chrome
+    sni: us-2.hydraing.com
     skip-cert-verify: false
-    reality-opts:
-      public-key: "Om7RMGbRUZjtJ9a3caJYod2dVYo-WfJNV5-C_QlvPmw"  # 示例占位值，必须替换
-      short-id: "0123456789abcdef" # 示例占位值，必须替换
-    encryption: ""
-    network: tcp
+    client-fingerprint: chrome
 
 # ==================== 代理策略组 Proxy Groups ====================
 # 基于标准故障转移版的策略组结构；代理型 fallback 统一优先使用自建节点，机场分组保持原顺序后备。
