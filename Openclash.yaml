@@ -594,9 +594,7 @@ rules:
   - "RULE-SET,Steam_CDN_IP,🎯 全球直连,no-resolve"
   - "GEOSITE,category-game-platforms-download,🎯 全球直连"
   - "GEOSITE,category-public-tracker,🎯 全球直连"
-  # >>> 加入 Blackmatrix Telegram 规则引入至 🌐 社交媒体 策略组 <<<
   - "RULE-SET,Blackmatrix_Telegram,🌐 社交媒体"
-  - "RULE-SET,Blackmatrix_Telegram_IP,🌐 社交媒体,no-resolve"
   - "GEOSITE,category-communication,💬 即时通讯"
   - "GEOSITE,category-social-media-!cn,🌐 社交媒体"
   - "GEOSITE,openai,🤖 ChatGPT"
@@ -634,19 +632,11 @@ rules:
 
 # ==================== 规则提供者 Rule Providers ====================
 rule-providers:
-  # >>> 新增：Blackmatrix Telegram 规则源 <<<
   Blackmatrix_Telegram:
     behavior: classical
     interval: 86400
     type: http
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml"
-    format: yaml
-
-  Blackmatrix_Telegram_IP:
-    behavior: ipcidr
-    interval: 86400
-    type: http
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram_IP.yaml"
     format: yaml
 
   Nonstandard_Port_Direct:
