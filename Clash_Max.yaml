@@ -88,7 +88,7 @@ NodeParam: &NodeParam {type: http, interval: 86400, health-check: {enable: true,
 # 锚点 - 节点订阅
 proxy-providers: 
   我的节点:
-    url: '请替换为你的新节点订阅链接'
+    url: 'https://s2.trojanflare.one/clashx/40866a9c-4281-4800-96a6-685bbacf383c'
     <<: *NodeParam
     path: './proxy_provider/Providers.yaml'
 
