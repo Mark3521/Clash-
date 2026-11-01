@@ -131,6 +131,9 @@ proxy-groups:
   # Mihon 独立策略组
   - {name: Mihon, type: select, proxies: [DIRECT, Proxy, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇳🇱 荷兰节点], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Book.png'}
 
+  # Clash of Clans 独立策略组
+  - {name: Clash of Clans, type: select, proxies: [DIRECT, Proxy, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇳🇱 荷兰节点], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png'}
+
   - {name: YouTube, type: select, proxies: [Proxy, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇳🇱 荷兰节点], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png'}
 
   - {name: Gamer, type: select, include-all: true, filter: *FilterGame, proxies: [DIRECT, Proxy], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png'}
@@ -242,6 +245,9 @@ rules:
 
  # ★ Mihon 独立分流
  - PROCESS-NAME,app.mihon,Mihon
+
+ # ★ Clash of Clans Android 独立分流
+ - PROCESS-NAME,com.supercell.clashofclans,Clash of Clans
 
  - DOMAIN-KEYWORD,connectivitycheck,DIRECT
  - DOMAIN-KEYWORD,msftconnecttest,DIRECT
